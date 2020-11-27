@@ -1,10 +1,10 @@
 #include "Fraction.h"
 
-#include <exception>
+#include <stdexcept>
 #include <cmath>
 
 Fraction::Fraction(const int numerator, const int denominator) {
-	if (denominator == 0) throw std::exception("ERROR: denominator = 0\n");
+	if (denominator == 0) throw std::runtime_error("ERROR: denominator = 0\n");
 
 	int gcd_num_den = gcd(std::abs(numerator), std::abs(denominator));
 

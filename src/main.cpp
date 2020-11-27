@@ -3,7 +3,7 @@
 
 #include <exception>
 
-void TestAll (); // главная тестирующая функция
+void TestAll (); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 void TestConstr();
 void TestSum();
@@ -190,6 +190,7 @@ void TestDiv() {
 			Fraction first(4, 5);
 			Fraction second;
 			Fraction result = first / second;
+			(void)result;
 			Assert(false, "TestDiv #2");
 		}
 		catch (const std::exception& err) {

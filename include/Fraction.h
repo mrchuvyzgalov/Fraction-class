@@ -5,8 +5,8 @@ class Fraction
 public:
 	Fraction(const int numerator = 0, const int denominator = 1);
 
-	int get_numerator() const noexcept; // получить числитель
-	int get_denominator() const noexcept; // получить знаменатель
+	int get_numerator() const noexcept; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	int get_denominator() const noexcept; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 	friend Fraction operator +(const Fraction& first, const Fraction& second);
 	friend Fraction operator -(const Fraction& first, const Fraction& second);
@@ -23,10 +23,10 @@ public:
 	friend bool operator ==(const Fraction& first, const Fraction& second);
 	friend bool operator !=(const Fraction& first, const Fraction& second);
 
-	static int gcd(int first, int second) noexcept; // нод двух чисел
+	static int gcd(int first, int second) noexcept; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
 private:
-	int numerator_; // числитель
-	int denominator_; // знаменатель
+	int numerator_; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	int denominator_; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 };
 
