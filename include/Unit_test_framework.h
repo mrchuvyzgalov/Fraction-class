@@ -4,6 +4,17 @@
 #include <exception>
 #include <iostream>
 #include <string>
+#include <vector>
+
+template<class T>
+std::ostream& operator <<(std::ostream& out, const std::vector<T>& vect) {
+    out << "{ ";
+    for (const auto& curr : vect) {
+        out << curr << " ";
+    }
+    out << "}";
+    return out;
+}
 
 template<class T, class U>
 void AssertEqual(const T& t, const U& u,

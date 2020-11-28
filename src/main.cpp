@@ -51,32 +51,50 @@ void TestConstr() {
 
 	{
 		Fraction fr;
-		Assert(fr.get_numerator() == 0 && fr.get_denominator() == 1, "TestConstr #2");
+		Assert(fr.get_numerator() == 0 && fr.get_denominator() == 1, "TestConstr #2.1");
+		AssertEqual(fr.get_elems(), std::vector<int>{ 0 }, "TestConstr #2.2");
+		AssertEqual(fr.get_numerators(), std::vector<int>{ 0 }, "TestConstr #2.3");
+		AssertEqual(fr.get_denominators(), std::vector<int>{ 1 }, "TestConstr #2.4");
 	}
 
 	{
 		Fraction fr(4, 5);
-		Assert(fr.get_numerator() == 4 && fr.get_denominator() == 5, "TestConstr #3");
+		Assert(fr.get_numerator() == 4 && fr.get_denominator() == 5, "TestConstr #3.1");
+		AssertEqual(fr.get_elems(), std::vector<int>{ 0, 1, 4 }, "TestConstr #3.2");
+		AssertEqual(fr.get_numerators(), std::vector<int>{ 0, 1, 4 }, "TestConstr #3.3");
+		AssertEqual(fr.get_denominators(), std::vector<int>{ 1, 1, 5 }, "TestConstr #3.4");
 	}
 
 	{
 		Fraction fr(4, 10);
-		Assert(fr.get_numerator() == 2 && fr.get_denominator() == 5, "TestConstr #4");
+		Assert(fr.get_numerator() == 2 && fr.get_denominator() == 5, "TestConstr #4.1");
+		AssertEqual(fr.get_elems(), std::vector<int>{ 0, 2, 2 }, "TestConstr #4.2");
+		AssertEqual(fr.get_numerators(), std::vector<int>{ 0, 1, 2 }, "TestConstr #4.3");
+		AssertEqual(fr.get_denominators(), std::vector<int>{ 1, 2, 5 }, "TestConstr #4.4");
 	}
 
 	{
 		Fraction fr(4, -10);
-		Assert(fr.get_numerator() == -2 && fr.get_denominator() == 5, "TestConstr #5");
+		Assert(fr.get_numerator() == -2 && fr.get_denominator() == 5, "TestConstr #5.1");
+		AssertEqual(fr.get_elems(), std::vector<int>{ -1, 1, 1, 2 }, "TestConstr #5.2");
+		AssertEqual(fr.get_numerators(), std::vector<int>{ -1, 0, -1, -2 }, "TestConstr #5.3");
+		AssertEqual(fr.get_denominators(), std::vector<int>{ 1, 1, 2, 5 }, "TestConstr #5.4");
 	}
 
 	{
 		Fraction fr(-4, 10);
-		Assert(fr.get_numerator() == -2 && fr.get_denominator() == 5, "TestConstr #6");
+		Assert(fr.get_numerator() == -2 && fr.get_denominator() == 5, "TestConstr #6.1");
+		AssertEqual(fr.get_elems(), std::vector<int>{ -1, 1, 1, 2 }, "TestConstr #6.2");
+		AssertEqual(fr.get_numerators(), std::vector<int>{ -1, 0, -1, -2 }, "TestConstr #6.3");
+		AssertEqual(fr.get_denominators(), std::vector<int>{ 1, 1, 2, 5 }, "TestConstr #6.4");
 	}
 
 	{
 		Fraction fr(-4, -10);
-		Assert(fr.get_numerator() == 2 && fr.get_denominator() == 5, "TestConstr #7");
+		Assert(fr.get_numerator() == 2 && fr.get_denominator() == 5, "TestConstr #7.1");
+		AssertEqual(fr.get_elems(), std::vector<int>{ 0, 2, 2 }, "TestConstr #7.2");
+		AssertEqual(fr.get_numerators(), std::vector<int>{ 0, 1, 2 }, "TestConstr #7.3");
+		AssertEqual(fr.get_denominators(), std::vector<int>{ 1, 2, 5 }, "TestConstr #7.4");
 	}
 }
 
