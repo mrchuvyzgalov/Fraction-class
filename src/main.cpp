@@ -3,7 +3,7 @@
 
 #include <exception>
 
-void TestAll (); // ������� ����������� �������
+void TestAll ();
 
 void TestConstr();
 void TestSum();
